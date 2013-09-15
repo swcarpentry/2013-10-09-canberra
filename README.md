@@ -13,15 +13,15 @@ For a schedule and installation instructions check out the bootcamp webpage at [
 | Topic |   Time slot |
 | ----- | ----------- |
 | Welcome and introduction   |  8:30 - 8:45 |
-| Introduction to scientific programming with R  |  8:45 - 10 |
+| Introduction to scientific programming with `R`  |  8:45 - 10 |
 | Break   | 10 - 10:20 |
-| Data manipulation with R    | 10:20 - 12 |
+| Data manipulation with `R`    | 10:20 - 12 |
 | Lunch  |  12 - 1 |
 | Writing functions and other control structures  | 1 - 2 |
 | Break  |  2 - 2:20 |
 | Writing functions and other control structures (cont)  |  2:20 - 3 |
 | Break   | 3 - 3:15 |
-| Data visualization in R | 3:15 - 5 |
+| Data visualization in `R` | 3:15 - 5 |
 
 **Day 2 schedule**
 
@@ -34,6 +34,6 @@ For a schedule and installation instructions check out the bootcamp webpage at [
 | Git continued |  1-1:45 |
 | Testing |1:45- 2:30 |
 | Break |  2:30 - 2:45 |
-| Reproducible workflows with R (Reproducible documents with R and `knitr`, building analysis pipelines with make) | 2:45 - 4:30 |
+| Reproducible workflows with `R` (Reproducible documents with R and `knitr`, building analysis pipelines with make) | 2:45 - 4:30 |
 | Summary and wrap up | 4:30 - 5 |
 
