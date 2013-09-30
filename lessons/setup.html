@@ -33,11 +33,7 @@ title: Setup Instructions
 <div class="span12">
 Finally, open Rstudio and paste the following commands into your console to install a few packages to use during the workshop.
 
-<pre><code>
-current_repo <- getOption('repos')
-current_repo["CRAN"] <- "http://cran.rstudio.com"
-options(repos = current_repo)
-packages <- c("ggplot2", "plyr", "reshape2", "knitr")
+<pre><code>packages <- c("ggplot2", "plyr", "reshape2", "knitr")
 install.packages(packages, dependencies = TRUE)
 
 </code></pre>
