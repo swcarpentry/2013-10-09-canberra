@@ -29,7 +29,7 @@ For a schedule and installation instructions check out the bootcamp webpage at [
 | Topic |   Time slot |
 | ----- | ----------- |
 | Basics of the shell | 9 - 10  |
-| Version Control with Git (includes 15 min break)  |  10 - 12 |
+| Version Control with Git (includes 15 min break at 10:30)  |  10 - 12 |
 | Lunch |  12-1 |
 | Git continued |  1 - 1:45 |
 | Testing |1:45 - 2:30 |
