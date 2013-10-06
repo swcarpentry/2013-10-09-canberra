@@ -7,6 +7,8 @@
 
 For a schedule and installation instructions check out the bootcamp webpage at [http://australianbioinformatics.net/software-carpentry-r-bootcamp](http://australianbioinformatics.net/software-carpentry-r-bootcamp)
 
+Please open the [bootcamp etherpad](https://etherpad.mozilla.org/swccanberra) in a separate browser tab. We'll use it to take collaborative notes. 
+
 ## Tentative Schedule
 **Day 1 schedule**
 
@@ -37,3 +39,6 @@ For a schedule and installation instructions check out the bootcamp webpage at [
 | Reproducible workflows with `R` (Reproducible documents with R and `knitr`, building analysis pipelines with `make`) | 2:45 - 4:30 |
 | Summary and wrap up | 4:30 - 5 |
 
+**Software installation reminder**
+
+For installation instructions see [here](http://swcarpentry.github.io/2013-10-09-canberra/lessons/setup.html) and also further instructions [here](additional_software.md)
