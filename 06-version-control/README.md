@@ -80,7 +80,50 @@ git config --global alias.ll 'log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s
 
 There are many more commands in Git but if you master this set it should serve you well for a long time.
 
+
+**Searching Git logs**
+
+Show commits only till a certain date.
+```
+git ls --until="2013-10-01"
+```
+
+Show commits since a certain date
+
+```
+git ls --since="2013-10-01"
+```
+
+Grep through your logs
+
+```
+git ls --grep=exercise
+```
+View only last 5 logs
+
+```
+git log -n 5
+git ls -n 5
+```
+
+Logs by a specific author
+
+
+```
+git log --author="Karthik"
+git ls --author="Karthik"
+```
+
+Show only commits that were merges
+
+```
+git log --merges
+```
+
+
+
 ---
+
 
 **Practicing Git branching**
 [http://pcottle.github.io/learnGitBranching/?NODEMO](http://pcottle.github.io/learnGitBranching/?NODEMO)
