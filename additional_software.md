@@ -12,9 +12,6 @@ Linux and Mac users already have Make pre-installed. Windows users will need to 
 Depending on time and progress on the proposed schedule, we may get to converting parsed markdown documents from markdown to publication ready pdfs. To acheive this you'll need to have a Latex interpreter installed on your laptop.
 
 * To convert documents to PDF you'll need LaTex installed. 
-[For Mac](http://www.tug.org/mactex/morepackages.html) For today please just install [BasicTex](http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg)
-[For Windows](http://miktex.org/download) ~ 155 mb
-
 
 **Latex** *Only for Windows and Mac users*
 
