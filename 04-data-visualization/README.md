@@ -1,4 +1,4 @@
-# Introduction to ggplot2
+# Data visualization with ggplot2
 
 Author: [Karthik Ram](mailto:karthik.ram+ggplot2@gmail.com), [Naupaka Zimmerman](naupaka@gmail.com) 
 
@@ -19,12 +19,10 @@ install.packages("knitr")
 Then Run
 
 ```coffee
-library(knitr)
-knitr('ggplot.Rnw')
-# You'll need to have a local Tex install to complete hte last step
-system("pdflatex ggplot.tex")
-```
+make slides
+```  
 
+Note: You'll need to have LaTex setup locally. See [additional_software] page in the root of this repository.
  
 # License  
 <a rel="license" href="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution 2.0 Generic License</a>.
