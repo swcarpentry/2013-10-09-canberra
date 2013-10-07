@@ -225,3 +225,9 @@ You can leave another instance of R to run tests automatically when code is chan
 * and a test path
 * (optional) reporter = "summary" by default. Can be changed to "minimal".
 
+The minimal reporter prints:  
+* **‘.’** for success, 
+* **‘E’** for an error 
+* and **‘F’** for a failure. 
+
+
