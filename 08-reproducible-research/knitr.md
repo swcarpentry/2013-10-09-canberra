@@ -99,13 +99,13 @@ Do not edit the output files because they are automatically generated. When repr
 
 **Other options you can add to the tag**
 
-echo = : TRUE or FALSE to show or hide code.
-eval = : TRUE or FALSE to run or skip the code.
-warning = : TRUE or FALSE to show or hide function warnings.
-message = :TRUE or FALSE to show or hide function messages.
-results = "hide": will hide results.
-fig.height: Height of figure
-fig.width: width of figure
+**echo** = : TRUE or FALSE to show or hide code.  
+**eval** = : TRUE or FALSE to run or skip the code.  
+**warning** = : TRUE or FALSE to show or hide function warnings.  
+**message** = :TRUE or FALSE to show or hide function messages.  
+**results** = "hide": will hide results.  
+**fig.height**: Height of figure  
+**fig.width**: width of figure  
 
 
 **Write sentences in text with inline output**
@@ -136,24 +136,32 @@ Global options are shared across all the following chunks after the location in 
 <pre><code>
 ```{r setoptions, echo = FALSE}
 options(width = 60, show.signif.stars = FALSE)
-opts_chunk$set(echo = FALSE, results = "asis", warning = FALSE, message = FALSE, fig.width = 5, fig.height = 4, tidy = TRUE, fig.align='center')
+opts_chunk$set(echo = FALSE, 
+            results = "asis", 
+            warning = FALSE, 
+            message = FALSE, 
+            fig.width = 5, 
+            fig.height = 4, 
+            tidy = TRUE, 
+            fig.align='center')
 ```</code></pre>
 
 
 ## Other Options
-# Long running process
+## Long running process
 
-add cache=TRUE to the block definition. After the first run, results are cached.
+add `cache=TRUE` to a code block definition. After the first run, results are cached. We'll discuss better ways to acheive the same thing using Make in the next section.
 
 
 ## Quick reporting
 
 If a user only has basic knowledge about R but knows nothing about knitr, or one does not want to write anything else other than an R script, it is also possible to generate a quick report from this R script using the `stitch()` function.
 
-The basic idea of stitch() is that knitr provides a template of the source document with some default settings, so that the user only needs to feed this template with an R script (as one code chunk), then knitr will compile the template to a report. Currently it has built-in templates for LATEX, HTML and Markdown. The usage is like this:
+The basic idea of `stitch()` is that knitr provides a template of the source document with some default settings, so that the user only needs to feed this template with an R script (as one code chunk), then knitr will compile the template to a report. Currently it has built-in templates for LATEX, HTML and Markdown. The usage is like this:
 
 ```coffee
-library(knitr) stitch("your-script.R")
+library(knitr) 
+stitch("your-script.R")
 ```
 ## Additional chunk options
 
@@ -183,7 +191,7 @@ If no chunk names are given, knitr will simply increment from chunk 1, 2,3 etc.
 
 It may be very surprising to knitr users that knitr does not stop on errors! As we can see from the previous example, 1 + ’a’ should have stopped R because that is not a valid addition operation in R (a number + a string). The default behavior of knitr is to act as if the code were pasted into an R console: if you paste 1 + ’a’ to the R console, you will see an error message, but that does not halt R – you can continue to type or paste more code. To completely stop knitr when errors occur, set this option in advance:
 
-```
+```coffee
 opts_knit$set(stop_on_error = 2L)
 ```
 
@@ -199,7 +207,8 @@ The meaning of the integer code for stop on error is as follows
 
 ```coffee
 library(ggplot2)
-p <- qplot(carat, price, data = diamonds) + geom_hex() p 
+p <- qplot(carat, price, data = diamonds) + geom_hex()
+p 
 # no need to print(p)
 ```
 
@@ -214,6 +223,7 @@ It can be more convenient to write R code chunks in a separate R script, rather 
 
 ```
 
+Be sure to leave a blank line between chunks.
 
 
 In the source document, we can first read the script using the func- tion read chunk():
@@ -242,3 +252,10 @@ pandoc test.md -o test.rtf
 pandoc test.md -o test.docx
 pandoc test.md -o test.pdf
 ```
+
+Add margins using (in this case 1 inch):
+
+```
+pandoc -V geometry:margin=1in test.md -o test.pdf
+```
+
