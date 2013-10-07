@@ -120,7 +120,7 @@ Include some text `r mean(1:5)`.
 ```{r fit_model}
 library(datasets)
 data(airquality)
-fit <- lm(Ozone ~ Wind + Temp + Solar.R, data = airquality)
+fit = lm(Ozone ~ Wind + Temp + Solar.R, data = airquality)
 ```
 
 
