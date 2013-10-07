@@ -121,8 +121,10 @@ Include some text `r mean(1:5)`.
 library(datasets)
 data(airquality)
 fit <- lm(Ozone ~ Wind + Temp + Solar.R, data = airquality)
-``````
+```
+</code></pre>
 
+<pre><code>
 ```{r showtable, results="asis", echo = FALSE,< message = FALSE, warning = FALSE}
 library(pandoc)
 pander(fit)
