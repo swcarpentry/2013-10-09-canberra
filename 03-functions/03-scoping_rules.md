@@ -50,6 +50,7 @@ is.discrete
 library(Hmisc)
 library(plyr)
 is.discrete
+```
 
 Reference functions inside function's namespace using the `::` operator.
 
@@ -66,6 +67,7 @@ It determines how a value is associated with a free variable in a function.
 add <- function(a, b) {
     (a + b)/n
 }
+```
 
 `n` here is the free variable.
 
