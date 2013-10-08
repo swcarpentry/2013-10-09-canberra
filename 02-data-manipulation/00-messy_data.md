@@ -47,6 +47,7 @@ Get values out of columns, variables as columns:
 
 
 ```coffee
+library(reshape2)
 dat <- melt(dat, id.vars = "status")
 ```
 
@@ -58,7 +59,7 @@ Add some nice metadata that was absent before:
 names(dat) <- c("status", "sex", "count")
 ```
 
-
+---
 
 ## More messy: non-standard input formats
 
