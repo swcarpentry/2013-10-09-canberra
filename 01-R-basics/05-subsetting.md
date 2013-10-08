@@ -45,6 +45,8 @@ x[-c(1,5)]
 x[c(TRUE, TRUE, FALSE, FALSE)]
 # or based on a condition
 x[x > 3]
+x[which(x >3)]
+Also see `which.max()` and `which.min()`
 ```
 
 4. with nothing

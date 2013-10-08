@@ -236,4 +236,11 @@ The minimal reporter prints:
 * **‘E’** for an error 
 * and **‘F’** for a failure. 
 
+---
+
+# Documenting functions
+
+We can document functions inline using a simple markup that's not all that different from writing comments. In addition to helping others understand what your function does, we can use a little bit more syntax to easily turn these into function documentation if we decide to create a package. More on this on Thursday.
+
+
 
