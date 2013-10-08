@@ -57,6 +57,15 @@ Use `#` signs to comment. Comment liberally in your R scripts. Anything to the r
 
 `<- ` is the assignment operator. Assigns values on the right to objects on the left. Mostly similar to `=` but not always. Learn to use `<-` as it is good programming practice. Using `=` in place of `<-` can lead to issues down the line.
 
+**Package management**
+
+Use `old.packages()` to keep track of what's out of date.  
+`update.packages()` - with package name will update a single package. Otherwise it will update all interactively. This can take a while if you haven't done it recently. To update everything without any user intervention, use the `ask = F` argument.
+
+```
+update.packages(ask = FALSE
+```
+
 
 **Quitting R**
 
