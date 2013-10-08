@@ -192,7 +192,7 @@ as.logical(x)
 # both don't work
 ```
 
-# Sometimes there is implicit conversion
+**Sometimes there is implicit conversion**
 ```
 > 1 < "2"
 [1] TRUE
@@ -200,13 +200,6 @@ as.logical(x)
 [1] FALSE
 > 
 ```
-
----
-## List
-
-List is a special vector. Each element can be a different class.
-Any element of a list be anything.
-
 
 ## Matrix
 
@@ -252,6 +245,9 @@ rbind(x,y)
 
 In R lists act as containers. Unlike atomic vectors, its contents are not restricted to a single mode and can encompass any data type. Lists are sometimes called recursive vectors, because a list can contain other lists. This makes them fundamentally different from atomic vectors. 
 
+List is a special vector. Each element can be a different class.
+
+
 
 Create lists using `list` or coerce other objects using `as.list()`
 
@@ -269,7 +265,9 @@ length(x)
 What is the class of `x[1]`?  
 how about `x[[1]]`?
 
+```
 xlist <- list(a = "Karthik Ram", b = 1:10, data = head(iris))
+```
 
 what is the length of this object?
 what about its structure?
@@ -320,8 +318,7 @@ Factors can only contain pre-defined values.
 
 Factors are pretty much integers that have labels on them.  While factors look (and often behave) like character vectors, they are actually integers under the hood, and you need to be careful when treating them like strings. Some string methods will coerce factors to strings, while others will throw an error.
 
-Sometimes factors can be left unordered. Example,  
-male, female
+Sometimes factors can be left unordered. Example: male, female
 
 Other times you might want factors to be ordered (or ranked). Example: low, medium, high. 
 
@@ -401,6 +398,7 @@ When you combine column wise, only row numbers need to match. If you are adding 
 `nrow()` - number of rows
 `ncol()` - number of columns
 `str()` - structure of each column
+`names()` - will list column names for a data.frame (or any object really).
 
 
 --
