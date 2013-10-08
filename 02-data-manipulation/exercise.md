@@ -44,6 +44,12 @@ You will have to:
 Advanced version of this question: Also return the year with highest population and highest per capita gdp. So you'll return 3 rows per country. 
 
 
+5. Read the `mammals.csv` file into a data.frame. Use `ddply` to split the dataset by limb morphology, then write each file to a separate text file named by limb.
+
+Hints: Use `unique` inside your anoynymous function to get a unique name.
+Use `paste` to create a filename. e.g. `paste(unique(x$Limb_morphology), ".csv", sep="")`
+
+Pass this variable to the `file` argument in `write.csv`
 
 
 
