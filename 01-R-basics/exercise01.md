@@ -18,7 +18,7 @@ mtcars[mtcars$cyl <= 5]
 mtcars[mtcars$cyl == 4 | 6, ]
 ```
 
-3. Why does mtcars[1:20] return a error? How does it differ from the similar mtcars[1:20, ]?
+3. Why does `mtcars[1:20]` return a error? How does it differ from the similar `mtcars[1:20, ]`?
 
 
 4. Load the `ggplot2` library. There should be a dataset called diamonds. You can verify that by typing in `data(diamonds)`
