@@ -41,16 +41,14 @@ The longer answer is that testing either before or after your software is writte
 ## Why testing is important?
 
 **Seems like extra work but will save you time**  
-* Decreased frustration. Whenever I’m working to a strict deadline I always seem to discover a bug in old code. Having to stop what I’m do- ing to fix the bug is a real pain. This happens less when I do more testing, and I can easily see which parts of my code I can be confident in by looking at how well they are tested.
+* Decreased frustration. Bugs appear very close to hard deadlines.  Testing allows to quickly identify where the problem is and fix it.
 
 **More confidence in the code**  
-* Better code structure. Code that’s easy to test is usually better designed. I have found writing tests makes me extract out the complicated parts of my code into separate functions that work in isolation. These functions are easier to test, have less duplication, are easier to un- derstand and are easier to re-combine in new ways.
-
-**Easier to pick up from an earlier session**  
-* Less struggle to pick up development after a break. If you always finish a session of cod- ing by creating a failing test (e.g. for the feature you want to implement next) it’s easy to pick up where you left off: your tests let you know what to do next.
+* Better code structure. Code that’s easy to test is usually better designed. Tests sometimes make you see large complicated functions and break them down into smaller, more manageable chunks.
+* 
 
 **Make changes or updates without worrying too much**  
-* Increased confidence when making changes. If you know that all major functionality has a test associated with it, you can confidently make big changes without worrying about acciden- tally breaking something.
+* Make changes confidently because you know your tests will catch any issues.
 
 
 ## Basics of testing
@@ -215,6 +213,14 @@ test_dir('path/to/test/folder')
 test_dir('path/to/test/folder', "minimal")
 
 source("test-str_length.r")
+```
+
+## Load and test package
+
+```
+library(testthat)
+library(package_name)
+test_package("package_name")
 ```
 
 ## Automatic testing

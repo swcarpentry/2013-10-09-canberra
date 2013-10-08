@@ -8,59 +8,49 @@ Analysis code is divided into text and code "chunks".
 
 This allows us to extract the code for machine readable documents (technically called `tangle`) or produce a human-readable document (called `weave`).
 
-Literate programming involves with three main steps:
-1. parse the source document and separate code from narratives.
-2. execute source code and return results.
-3. mix results from the source code with the original narratives.
+Literate programming involves with three main steps:  
+
+1. Parse the source document and separate code from narratives.
+2. Execute source code and return results.
+3. Mix results from the source code with the original narratives.
 
 ## Why this is important?
-Results from scientific research have to be reproducible to be trustworthy. We do not want a finding to be merely due to an isolated occurrence, e.g. only one specific laboratorian can produce the results on one specific day, and nobody else can produce the same results under the same conditions.
+Results from scientific research have to be reproducible to be trustworthy. We do not want a finding to be merely due to an isolated occurrence, e.g. only one specific lab can produce the results on one specific day, but no one else can.
 
-Reproducible research (RR) is one possible by-product of dynamic report generation, but the latter does not absolutely guarantee RR. Because there is usually no human intervention when we generate a report dynamically, it is likely to be reproducible since it is relatively easy to prepare the same software and hardware environment, which is everything we need to reproduce the results. 
+Reproducible research (RR) is one possible by-product of dynamic report generation, but it does not absolutely guarantee RR. 
 
 ## Installing Knitr
-
 
 ```coffee
 install.packages("knitr", dependencies = TRUE)
 install.packages("pander") # useful for formatting tables.
 ```
 
-Knitr supports a variety of documentation formats including markdown, html and LaTeX. Exports to PDF and HTML.
+Knitr supports a variety of documentation formats including markdown, `html` and `LaTeX`. Exports to `PDF` and `HTML`.
 
 ## What is markdown?
 
-An incredibly simple semantic file format, not too dissimilar from .doc, .rtf or .txt. Markdown makes it easy for even those without a web-publishing background to write prose (including with links, lists, bullets, etc.) and have it displayed like a website. 
+An incredibly simple semantic file format, not too dissimilar from .doc, .rtf or .txt. Markdown makes it easy for even those without a web-publishing background to write any sort of text (including with links, lists, bullets, etc.) and have it displayed in a variety of formats. 
 
 * [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 * [Original markdown reference](http://daringfireball.net/projects/markdown/basics)
 
 
-## How to acheive reproducibility?
+## When to implement reproducibility via literate programming?
 
 * Anytime but easiest to do at the beginning of a project.
 * Best used alongside version control (keeps track of everything as * you go along)
 * Use software like R where instructions are coded (no GUIs unless they generate code)
 * Don't save the output (only raw dataset with pre-processing code. Don't save the cleaned datasets except for temporary use).
-and save the data in a non-proporietary format (e.g. csv over xls).
+and save the data in a non-proporietary format (e.g. `csv` over `xls`).
 
 
 ---
 
 **Good and Bad Practices**
 
-The key to keep in mind for RR is that other people should be able to reproduce our results, therefore we should try out best to make out computation portable. We discuss some good practices for RR below and explain why it can be bad not to follow them.
+See best practices document in the 01-R-basics folder.
 
-• manage all source files under the same directory and use relative paths whenever possible.
-
-• Do not change the working directory after the computing has started: `setwd()` is the function in R to set the working directory, and it is not uncommon to see `setwd(’path/to/some/dir’)`in user’s code, which is bad because it is not only an absolute path, but also has a global effect to the rest of the source document.
-
-• Compile the documents in a clean R session: existing R objects in the current R session may “contaminate” the results in the output.
-￼￼￼￼￼
-• Avoid environment variables for data analysis.
-
-• attach: `sessionInfo()` and instructions on how to compile this document: the session information makes a reader aware of the software environment such as the version of R, the operating system and add-on packages used. 
-Use an automated approach like makefiles to build the final document.
 
 ## Creating a basic knitr document
 
@@ -87,7 +77,7 @@ knit("file.Rmd")
 
 knitr reads the Rmd file, finds and runs the code chunks identified by the backticks, and replaces it with the output of the functions. 
 
-Add names to code chunkc
+Add names to code chunk
 
 e.g.
 <pre><code>
@@ -149,9 +139,9 @@ opts_chunk$set(echo = FALSE,
 
 
 ## Other Options
-## Long running process
+**Deailing with long running process**
 
-add `cache=TRUE` to a code block definition. After the first run, results are cached. We'll discuss better ways to acheive the same thing using Make in the next section.
+add `cache=TRUE` to a code block definition. After the first run, results are cached. We'll discuss better ways to acheive the same thing using `Make` in the next section.
 
 
 ## Quick reporting
@@ -199,9 +189,9 @@ opts_knit$set(stop_on_error = 2L)
 
 The meaning of the integer code for stop on error is as follows
 (from the evaluate package; see the documentation for evaluate() there):
-0L do not stop on errors, just like the code was pasted into R console
-1L when an error occurs, return the results up to this point and ignore the rest of code in the chunk but do not throw the error either
-2L a full stop on errors
+* **0L** do not stop on errors, just like the code was pasted into R console
+* **1L** when an error occurs, return the results up to this point and ignore the rest of code in the chunk but do not throw the error either
+* **2L** a full stop on errors
 
 
 ## Working with graphics in knitr
