@@ -29,7 +29,8 @@ apply(m, 2, mean)
 
 ```coffee
 head(iris)
-by(iris[, 1:4], iris$Species, sum)
+by(iris[, 1:2], iris[,"Species"], summary)
+by(iris[, 1:2], iris[,"Species"], sum)
 ```
 
 
