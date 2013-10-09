@@ -34,9 +34,9 @@ Please open the [bootcamp etherpad](https://etherpad.mozilla.org/swccanberra) in
 | Version Control with Git (includes 15 min break at 10:30)  |  10 - 12 |
 | Lunch |  12-1 |
 | Git continued |  1 - 1:45 |
-| Testing |1:45 - 2:30 |
+| -Testing- More data manipulation |1:45 - 2:30 |
 | Break |  2:30 - 2:45 |
-| Reproducible workflows with `R` (Reproducible documents with R and `knitr`, building analysis pipelines with `make`) | 2:45 - 4:30 |
+| Reproducible workflows with `R` (Reproducible documents with R and `knitr`) time permitting | 2:45 - 4:30 |
 | Summary and wrap up | 4:30 - 5 |
 
 **Software installation reminder**
