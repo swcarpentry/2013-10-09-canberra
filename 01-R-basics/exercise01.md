@@ -12,8 +12,11 @@ df <- data.frame(id = c("Jason","Paul","Mary", "Robert","Toby","Nina","Robin","J
 
 ```
 mtcars[mtcars$cyl = 4, ]
+# Exclude only rows 1 through 4
 mtcars[-1:4, ]
+# Return only rows for cylinders less than 5
 mtcars[mtcars$cyl <= 5]
+# Return only rows for cylinders that are 4 or 6.
 mtcars[mtcars$cyl == 4 | 6, ]
 ```
 
