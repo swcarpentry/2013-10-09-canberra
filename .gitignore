@@ -1,5 +1,9 @@
+
 *~
 *.pyc
 .DS_Store
 .ipynb_checkpoints
 _site
+*.key
+08-reproducible-research/knitr_notes.md
+ 
