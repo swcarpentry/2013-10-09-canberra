@@ -286,27 +286,6 @@ It doesn't print out like a vector. Prints a new line for each element.
 
 Elements are indexed by double brackets. Single brackets will still return a(nother) list.
 
----
-## Data Frames
-
-A data frame is the most common way of storing data in R, and if used systematically make data analysis easier. Under the hood, a data frame is a list of equal-length vectors of different modes. This makes it a 2d dimensional structure, so it shares properties of both the matrix and the list. 
-
-A data frame is really just a list with each component of the list being a vector of the same mode.
-
-```coffee
-df <- data.frame(id = c("a","b","c","d","e","f","g","h","i","j"), x = 1:10, y = rnorm(10))
-str(df)
-```
-
-A data frame is a special type of list where every element of a list has same length.
-
-See that it is actually a special list:
-
-    > is.list(iris)
-    [1] TRUE
-    > class(iris)
-    [1] "data.frame"
-     > 
 
 ---
 
@@ -400,7 +379,15 @@ When you combine column wise, only row numbers need to match. If you are adding 
 `str()` - structure of each column
 `names()` - will list column names for a data.frame (or any object really).
 
+A data frame is a special type of list where every element of a list has same length.
 
+See that it is actually a special list:
+
+    > is.list(iris)
+    [1] TRUE
+    > class(iris)
+    [1] "data.frame"
+     > 
 --
 
 **Naming objects**  
