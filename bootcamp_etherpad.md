@@ -173,7 +173,7 @@ mean(x)
 
 ----
 
-# Write a function which takes a single numeric value X as argument and returns a logical value which is TRUE if X is larger than 15, or FALSE otherwise.
+**Write a function which takes a single numeric value X as argument and returns a logical value which is TRUE if X is larger than 15, or FALSE otherwise.**
 
 ```coffee
 test_fn <- function(x) {
@@ -196,12 +196,11 @@ test_fn <- function(x) {
 
 **Extend the previous function by including an extra argument which sets the threshold (i.e. 15 in the previous question).**
 
-```
+```coffee
 test_fn <- function(x, threshold = 15) {
         ifelse(x > threshold, TRUE, FALSE)
         # ifelse(condition,succesful_outcome, alternative)
 }
-
 test_fn(5)
 # change the threshold
 test_fn(5, 2)
