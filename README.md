@@ -17,7 +17,7 @@ Please open the [bootcamp etherpad](https://etherpad.mozilla.org/swccanberra) in
 | Welcome and introduction   |  9 - 9:20 |
 | [Introduction to scientific programming with R](https://github.com/swcarpentry/2013-10-09-canberra/tree/master/01-R-basics#introduction-to-the-r-language-and-r-ecosystem)  |  9:20 - 10 |
 | Break   | 10 - 10:20 |
-| [Data manipulation with R](https://github.com/swcarpentry/2013-10-09-canberra/tree/master/02-data-manipulation#section-02---data-manipulation-in-r)    | 10:20 - 12 |
+| [Data manipulation with R](https://github.com/swcarpentry/2013-10-09-canberra/tree/master/03-data-manipulation#section-03---data-manipulation-in-r)    | 10:20 - 12 |
 | Lunch  |  12 - 1 |
 | [Writing functions and other control structures](https://github.com/swcarpentry/2013-10-09-canberra/tree/master/02-functions#functions-and-control-structures)  | 1 - 2 |
 | Break  |  2 - 2:20 |
