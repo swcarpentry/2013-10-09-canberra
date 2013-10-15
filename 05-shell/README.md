@@ -1,6 +1,8 @@
 # Basic Shell Commands
 ***
 
+[Explain Shell](http://explainshell.com/) is a really useful resource for pulling up help on shell commands in your browser.
+
 This is a quick cheat sheet to some of the commands we'll explore in the basic and advanced shell sections.
 
 ## 1. Shell Basics:

@@ -1,6 +1,8 @@
 
 # Functions practice.
 
+0. There's 
+
 1. Write a function which takes a numeric vector as argument and calculates the mean of the vector.
 
 2. Write a function which takes a single numeric value X as argument and returns a logical value which is TRUE if X is larger than 15, or FALSE otherwise.

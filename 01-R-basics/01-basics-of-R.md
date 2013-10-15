@@ -63,7 +63,7 @@ Use `old.packages()` to keep track of what's out of date.
 `update.packages()` - with package name will update a single package. Otherwise it will update all interactively. This can take a while if you haven't done it recently. To update everything without any user intervention, use the `ask = F` argument.
 
 ```
-update.packages(ask = FALSE
+update.packages(ask = FALSE)
 ```
 
 

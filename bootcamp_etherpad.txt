@@ -519,7 +519,6 @@ first_plot <- first_plot + geom_point()
 climate <- read.csv("http://inundata.org/climate.csv", header = TRUE)
 
 head(climate)
-head(climate)
     X   Source Year Anomaly1y Anomaly5y Anomaly10y Unc10y
 1 102 Berkeley 1901        NA        NA     -0.162  0.109
 2 103 Berkeley 1902        NA        NA     -0.177  0.108
