@@ -66,7 +66,7 @@ How to install Rdocumentation:
 ## Answers to exercise 1
 ---------------------
 
-```
+```coffee
 mtcars[-c(1,2,5), ]
 ```
 
@@ -74,9 +74,8 @@ mtcars[-c(1,2,5), ]
 
 **Functions**
 
-```
+```coffee
 ls()
-
 # This function takes 2 inputs, adds them and returns an output
 # improving fn, adding defaults
 add <- function(x = 1, y = 2) {
@@ -103,17 +102,17 @@ add4(1, 2)
 --------
 
 
-```
-> cube <- max.power(3)
-> class(cube)
+```coffee
+cube <- max.power(3)
+class(cube)
 [1] "function"
-> square <- max.power(2)
-> class(square)
+square <- max.power(2)
+class(square)
 [1] "function"
 ```
       
 
-```
+```coffee
 y <- rnorm(10)
 mean(y)
 
@@ -159,11 +158,8 @@ Please work on questions 1 through 3. Skip 4 for now.
 
 ----
 
-```
+```coffee
 # Write a function which takes a numeric vector as argument and calculates the mean of the vector.
-
-
-```
 my_mean <- function(vec) {
         total <- sum(vec)
         len <- length(vec)
@@ -179,7 +175,7 @@ mean(x)
 
 # Write a function which takes a single numeric value X as argument and returns a logical value which is TRUE if X is larger than 15, or FALSE otherwise.
 
-```
+```coffee
 test_fn <- function(x) {
         if(x > 15) {
         TRUE
@@ -226,11 +222,12 @@ mean_iris <- function(dataset) {
         output <- data.frame(Species = unique(dataset$Species), sepal_length, petal_length, sepal_width, petal_width)
         return(output)
 }
+```
 
+```
 result1 <- mean_iris(sp1)
 result2 <- mean_iris(sp2)
 result3 <- mean_iris(sp3)
-
 final_result <- rbind(result1, result2, result3)
 ```
 
@@ -240,14 +237,13 @@ More examples of apply: [https://github.com/swcarpentry/2013-10-09-canberra/blob
 
 
 ```
-> ddply(iris, .(Species), mean_iris)
+ddply(iris, .(Species), mean_iris)
      Species sepal_length petal_length sepal_width petal_width
 1     setosa        5.006        1.462       3.428       0.246
 2 versicolor        5.936        4.260       2.770       1.326
 3  virginica        6.588        5.552       2.974       2.026
-> ?ddply
-> ?ddply
->
+?ddply
+?ddply
 ```
 
 ```
@@ -327,8 +323,12 @@ hle <- function(data) {
 
 # Problem 2
 
+```coffee
+# to download the data
 url2 <- "http://inundata.org/mammals.csv"
 mammals <- read.csv(url2, stringsAsFactors = FALSE, header = TRUE)
+```
+
 
 **From this data frame, split by Order_or_higher (there are 33 unique Orders), and for each piece, return a data.frame that contains the following information:**
 Order_or_higher, mean(Mass_ln_g), max(Mass_ln_g), length/count of unique Species
@@ -339,7 +339,7 @@ Your result should have a dimension of 33  4.
 
 Thanks to someone in the room, we've run into another complication. There aren't 33 unique (actual = 31) orders. Some are duplicates. 
 
-```
+```coffee
 e.g. see > unique(mammals$Order_or_higher)
  [1] "Cimolesta"                        "Condylarthra"
  [3] "Arctostylopida"                   "Artiodactyla"
@@ -377,7 +377,7 @@ pseudocode: Read the data
             
 The library called "stringr" has a whole bunch of useful string functions. Things we're looking for are ones that can replace those unintended characters, strip out while spaces. We also need to find (or write) a function to capitalize words.            
 
-```
+```coffee
 capwords <- function(s, strict = FALSE) {
          cap <- function(s) paste(toupper(substring(s, 1, 1)),
                        {s <- substring(s, 2); if(strict) tolower(s) else s},
@@ -407,9 +407,8 @@ lsp <- function(package, pattern, all.names = FALSE) {
 ```
 
 
-```
+```coffee
 clean_orders <- function(order_name) {
-    
     order_name <- capwords(order_name)
     #order_name <- str_trim(order_name)
    # order_name <- str_sub(order_name, "\\\xca", "")
@@ -425,7 +424,7 @@ sapply(mammals$Order_or_higher, clean_orders, simplify = TRUE)
 
 
 
-```
+```coffee
 result <- ddply(mammals, .(Order_or_higher), function(x) {
         unique_species_count <- length(unique(x$Species))
         mean_mass <- mean(x$Mass_ln_g)
@@ -455,7 +454,7 @@ apropos("<part of a function name>")
 
 To get manual pages if you're using Git Bash (where the 'man' command doesn't work), use this website
 
-http://man.he.net/
+[http://man.he.net/](http://man.he.net/)
 
 e.g. for the cp command, this is the documentation:
 http://man.he.net/?topic=cp&section=all
@@ -469,10 +468,10 @@ Notes for this section are here: [https://github.com/swcarpentry/2013-10-09-canb
 
 Something for after the workshop - if you think that Git looks useful, but the commandline version doesn't quite do it for you, there are windows and Mac GUIs for GitHub:
 
-http://windows.github.com/
-http://mac.github.com/
+[http://windows.github.com/](http://windows.github.com/)
+[http://mac.github.com/](http://mac.github.com/)
 
-```
+```coffee
 git config --global alias.st status 
 git config --global alias.ci commit 
 git config --global alias.co checkout 
@@ -486,7 +485,8 @@ git commit -m "Initial commit"
 git status
 ```
 
-#  Some examples of how to git add
+**Some examples of how to git add**  
+
 ```
 git add README.md
 git add *.md
@@ -495,42 +495,42 @@ git add *.R
 echo "here's another file" > script.R
 git add script.R
 git commit -m "Adding our first script"
-
-
 git log
 ```
 
  **To add and commit a previously tracked  file, use **  
-git commit -am "commit message"
+`git commit -am "commit message"`
 
  **the -a adds right before committing.**  
 
  **Basic git workflow**  
 For a new project:
-git init
+`git init`
 
  **To add a file**  
+```
 git add <file>
 git add .
+```
 
  **To  commit change**  
 
-git commit
+`git commit`
  **pressing enter will launch default editor**  
 
  **to skip editor**  
-git commit -m "message"
+`git commit -m "message"`
 
  **To add changes to previously tracked file and commit at same time**  
 
-git commit -am "message"
+`git commit -am "message"`
 
 ----------
 For the afternoon, follow along here: 
 [http://pcottle.github.io/learnGitBranching/?NODEMO](http://pcottle.github.io/learnGitBranching/?NODEMO)
 
 
-Merging
+**Merging**
 
 # Documenting how to merge git.
 
@@ -545,7 +545,7 @@ git merge <other branch>
 
 [https://github.com/swcarpentry/2013-10-09-canberra/tree/master/04-data-visualization](https://github.com/swcarpentry/2013-10-09-canberra/tree/master/04-data-visualization)
 
-```
+```coffee
 library(reshape2)
 result <- melt(iris, id.var = "Species")
 first_plot <- ggplot(iris, aes(Sepal.Length, Sepal.Width))
@@ -557,7 +557,7 @@ first_plot <- first_plot + geom_point()
 
 # Line plot
 
-```
+```coffee
 climate <- read.csv("http://inundata.org/climate.csv", header = TRUE)
 
 head(climate)
@@ -588,8 +588,9 @@ geom_ribbon(aes(ymin = Anomaly10y - Unc10y, ymax = Anomaly10y + Unc10y), alpha =
 geom_line(size = 1, color = "steelblue") + theme_bw() + ggtitle("Berkeley climate uncertainty data")
 ```
 
-Plot ala Pete...
-```
+Plot ala Pete...  
+
+```coffee
 example_plot <- ggplot(climate, aes(Year, Anomaly10y)) +
   geom_line(aes(Year, (Anomaly10y - Unc10y)), size = 1, color = "red", linetype = "dashed") + 
   geom_line(aes(Year, (Anomaly10y + Unc10y)), size = 1, color = "red", linetype = "dashed") + 
@@ -598,7 +599,7 @@ example_plot <- ggplot(climate, aes(Year, Anomaly10y)) +
 example_plot
 ```
 
-```
+```coffee
 # pseudocode for a plot function (not tested)
     uncertainty_plot <- function(data, v1, v2, def_title="", geom = "point") {
         if(geom == "point") {
@@ -611,7 +612,7 @@ example_plot
 uncertainty_plot(climate)
 ```
 
-# academic accounts for github
+**Academic accounts for GitHub**
 
 github.com/edu
 
