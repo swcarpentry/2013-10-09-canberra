@@ -45,7 +45,7 @@ cd bootcamp
 ```
 
 
-# Save all your material and work here. We'll commit these changes to a version control repository on day 2.
+**Save all your material and work here. We'll commit these changes to a version control repository on day 2.**
 
 
 See links to all the material I demo'ed this morning here:
@@ -72,7 +72,7 @@ mtcars[-c(1,2,5), ]
 
 
 
-######### Functions ########
+**Functions**
 
 ```
 ls()
@@ -157,7 +157,9 @@ Please work on questions 1 through 3. Skip 4 for now.
 # functions exercise solutions
 
 
-# -----------------------
+----
+
+```
 # Write a function which takes a numeric vector as argument and calculates the mean of the vector.
 
 
@@ -173,8 +175,8 @@ my_mean(x)
 mean(x)
 ```
 
+----
 
-# ------------------
 # Write a function which takes a single numeric value X as argument and returns a logical value which is TRUE if X is larger than 15, or FALSE otherwise.
 
 ```
@@ -194,9 +196,9 @@ test_fn <- function(x) {
 ```
 
 
+----
 
-# --------------------
-# Extend the previous function by including an extra argument which sets the threshold (i.e. 15 in the previous question).
+**Extend the previous function by including an extra argument which sets the threshold (i.e. 15 in the previous question).**
 
 ```
 test_fn <- function(x, threshold = 15) {
@@ -285,12 +287,12 @@ hle <- function(data) {
     
 Use this with the ddply. You can improve upon this function.     
 
-## Solution
+**Solution**
 
 
 [Read the gapminderDataFiveYear.txt dataset in the data folder into an object. Split the data by continent and country, find the year with the highest life expectancy for each combination and return those results back into a data.frame](https://github.com/swcarpentry/2013-10-09-canberra/blob/master/02-data-manipulation/02-apply-family.md#apply)
 
-# Reading the data from the web
+**Reading the data from the web**
 
 ```
 url <- "http://inundata.org/gapminderDataFiveYear.txt"
@@ -366,7 +368,7 @@ b) Capitalize first letter of each Order_or_higher
 Then push through ddply. I'll provide a solution tommorow morning.
 
 ----
-# Solution to the mammal problem.
+**Solution to the mammal problem.**
 
 pseudocode: Read the data
             Clean the Orders_or_higher column 
@@ -382,7 +384,7 @@ capwords <- function(s, strict = FALSE) {
                                   sep = "", collapse = " " )
          sapply(strsplit(s, split = " "), cap, USE.NAMES = !is.null(names(s)))
      }
-   
+     
 # test out capwords
 capwords("karthik")
 # should return Karthikur12
